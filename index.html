@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyHub - Study Material</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 <body>
-    <p>Hello</p>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>StudyHub</h1>
+          <div class="pill">Browse Engineering Notes</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+        <div class="badge" id="breadcrumbs">Home</div>
+        <button id="backHome" class="btn" type="button">Home</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <aside class="sidebar">
+        <div class="sectionTitle">Navigate</div>
+        <div class="list" id="branchList"></div>
+
+        <div class="sectionTitle">Semesters</div>
+        <div class="list" id="semList"></div>
+
+        <div class="sectionTitle">Subjects</div>
+        <div class="list" id="subList"></div>
+
+        <div class="sectionTitle">Units</div>
+        <div class="list" id="unitList"></div>
+
+        <div class="sectionTitle">Topics</div>
+        <div class="controls">
+          <input id="searchBox" class="input" placeholder="Search topics by title (within selected unit)" />
+          <button id="searchBtn" class="btn" type="button">Search</button>
+        </div>
+        <div class="list" id="topicList"></div>
+      </aside>
+
+      <main class="main">
+        <div class="sectionTitle">Details</div>
+        <div class="controls">
+          <div class="badge" id="mainTitle" style="color:var(--text);font-weight:800;">Browse Study Material</div>
+          <div class="hint" id="loading" style="margin-left:auto">Loading...</div>
+        </div>
+        <div id="topicDetail"></div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="/assets/js/app.js"></script>
 </body>
 </html>
+
