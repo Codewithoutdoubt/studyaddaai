@@ -1,0 +1,19 @@
+{
+  "name": "studyhub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "StudyHub study management platform database foundation",
+  "scripts": {
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@netlify/database": "latest",
+    "drizzle-orm": "beta"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "drizzle-kit": "beta",
+    "typescript": "latest"
+  }
+}
